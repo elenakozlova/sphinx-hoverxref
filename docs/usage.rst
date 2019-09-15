@@ -2,21 +2,21 @@ Usage
 =====
 
 This extension defines a custom role called ``:hoverxref:``.
-When this role is used, it will show a tooltip when ``hover`` mouse event is triggered,
-and will populate the content tooltip with the content of the document and section the link is pointing to.
+It shows a tooltip when ``hover`` mouse event is triggered,
+and populates the content tooltip with the content of the document and section to which the link is pointing.
 
 ``:hoverxref:`` uses Sphinx's internals reference resolution to find out where the link points to.
 So, the way of referencing the section works in the same way as the ``:ref:`` standard role.
 
-Simplest usage example,
+Example:
 
 .. code-block:: rst
 
    This will :hoverxref:`show a tooltip <hoverxref:section>` in the linked words to ``hoverxref``.
 
-will render to this:
+Result:
 
-This will :hoverxref:`show a tooltip <hoverxref:section>` in the linked words to ``hoverxref``.
+:hoverxref:`shows a tooltip <hoverxref:section>` in the linked words to ``hoverxref``.
 
 
 Tooltip on custom object
@@ -63,14 +63,15 @@ Show a tooltip to :ref:`usage:Tooltip on all :ref: roles` page.
 Tooltip on Sphinx Domains
 -------------------------
 
-You can decide whether use ``hoverxref`` on a particular Sphinx Domain as well.
-An example using Python Domain would be like:
+You can decide whether to use ``hoverxref`` or not on a particular Sphinx Domain as well.
+
+FExample on Python Domain:
 
 .. code-block:: rst
 
    :py:class:`hoverxref.domains.HoverXRefStandardDomain`
 
-That will render to:
+Result:
 
 :py:class:`hoverxref.domains.HoverXRefStandardDomain`
 
@@ -91,7 +92,7 @@ These actions are usually calling a Javascript function.
 `sphinx-tabs`_ and mathjax_.
 
 
-Tooltip with ``sphinx-tabs``
+Example with ``sphinx-tabs``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To render a tooltip with a ``sphinx-tabs`` content you need to enable :confval:`hoverxref_sphinxtabs`.
@@ -103,7 +104,7 @@ To render a tooltip with a ``sphinx-tabs`` content you need to enable :confval:`
 Show a :hoverxref:`tooltip with Sphinx Tabs <installation:Installation>` on its content.
 
 
-Tooltip with ``mathjax``
+Example with ``mathjax``
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To render a tooltip where its contents has a ``mathjax`` you need to enable :confval:`hoverxref_mathjax`.
